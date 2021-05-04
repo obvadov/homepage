@@ -1,2 +1,2 @@
 # homepage
-My Very own personal website. Basically this is just a résumé.
+My Very Own personal website. Basically this is just a résumé.
