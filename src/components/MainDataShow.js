@@ -33,7 +33,6 @@ const MainDataShow = (props) => {
 
   useEffect(() => {
     if (pageStagesR.changeCharacter) {
-      console.log("rere useEff");
       getRandomCharacter().then((props) => {
         dispatchCharacterR({type: "INIT_CHARACTER", payload: props.character});
         setDevelopedBy(props.developedBy);
