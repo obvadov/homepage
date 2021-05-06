@@ -18,6 +18,10 @@
 
     #character_img {
       text-align: center;
+      img {
+        height: 520px;
+        width: auto;
+      }
     }
   }
 
@@ -59,6 +63,18 @@
         li {
           text-align: center;
         }
+      }
+    }
+
+    #character_base_info {
+      padding-top: 2rem;
+      flex-grow: 1;
+    }
+
+    #character_img {
+      img {
+        height: 350px;
+        width: auto;
       }
     }
   }

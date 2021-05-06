@@ -1,7 +1,5 @@
 import React, {useEffect, useReducer, useState} from "react";
 
-import _ from "lodash";
-
 // components
 import Header from "../components/Header/Header";
 import Languages from "../components/Languages/Languages";
@@ -26,24 +24,22 @@ const MainDataShow = (props) => {
   const [characterR, dispatchCharacterR] = useReducer(characterReducer, {});
   const [pageStagesR, despatchPageStagesR] = useReducer(pageStagesReducer, {
     isLoading: true,
-    changeCharacter: false,
+    changeCharacter: true,
   });
 
   const changeCharacterHandler = () => {
-    despatchPageStagesR({type: "CHANGE_CHARACTER"});
-    dispatchCharacterR({type: "INIT_CHARACTER", payload: props.character});
+    despatchPageStagesR({type: "INIT_PAGE"});
   };
 
   useEffect(() => {
-    despatchPageStagesR({type: "INIT_PAGE"});
-
-    getRandomCharacter().then((props) => {
-      dispatchCharacterR({type: "INIT_CHARACTER", payload: props.character});
-
-      setDevelopedBy(props.developedBy);
-
-      despatchPageStagesR({type: "PAGE_LOADED"});
-    });
+    if (pageStagesR.changeCharacter) {
+      console.log("rere useEff");
+      getRandomCharacter().then((props) => {
+        dispatchCharacterR({type: "INIT_CHARACTER", payload: props.character});
+        setDevelopedBy(props.developedBy);
+        despatchPageStagesR({type: "PAGE_LOADED"});
+      });
+    }
   }, [pageStagesR.changeCharacter]);
 
   //

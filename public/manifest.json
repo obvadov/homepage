@@ -1,0 +1,8 @@
+{
+  "name": "galaxyguardianportfolio",
+  "short_name": "Portfolio",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Galaxy Gurdians could join even yours team"
+}

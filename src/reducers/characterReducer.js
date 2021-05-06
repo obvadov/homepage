@@ -1,5 +1,3 @@
-import React from "react";
-
 const characterReducer = (state, action) => {
   switch (action.type) {
     case "INIT_CHARACTER":

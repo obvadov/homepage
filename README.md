@@ -15,3 +15,5 @@ https://us-central1-bsa-portfolio-api.cloudfunctions.net/character/random
 2. React APP with SCSS styles, state, reducer -hooks
 
 Enjoy it ;)
+
+P.S. If you have a problem with characters images, change/delete "homepage" param in package.json file, it has a githubPage value now
